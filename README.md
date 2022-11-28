@@ -106,7 +106,7 @@ Installed all of these container-related tools:
   brew install kubectl
   ```
   or
-    ```sh
+  ```sh
   winget install -e --id Kubernetes.kubectl
   ```
 
@@ -189,7 +189,7 @@ Installed all of these container-related tools:
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use the exposed IP & Ports from step 9. If you use minikube service the API can be accessed on `http://Exposed-IP:Exposed-Port/` and If you use port-forwarding it should be on `http://127.0.0.1:8080/`.
+Use the exposed IP & Ports from step 11. If you use minikube service the API can be accessed on `http://Exposed-IP:Exposed-Port/` and If you use port-forwarding it should be on `http://127.0.0.1:8080/`.
 
 Login credentials for admin (ID: 1, Role: Admin)
 ```yaml
