@@ -53,6 +53,13 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#screenshots">Screenshots</a>
+      <ul>
+        <li><a href="#docker">Docker</a></li>
+        <li><a href="#kubernetes">Kubernetes</a></li>
+        <li><a href="#postman">Postman</a></li>
+      </ul>
+    </li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -65,13 +72,15 @@
 
 A Rest API Applicaton which allows CRUD User and User Login using Golang & MySQL. This API utilizes JWT to Authenticate it's endpoints and expires within 1 hour. There are two roles in this application, Admin and User. The Admin has access to all API CRUD, while the User only gets access to the user's data (Read). This application also implements Architecture Microservices using Kubernetes with Docker container deploy. 
 
-Document related to this assignment can be seen [here](https://docs.google.com/document/d/1AfsaaEmpjgCMm3izfT0o3WUGHndWkZLl/)
+Document related to this assignment can be seen [**here**](https://docs.google.com/document/d/1AfsaaEmpjgCMm3izfT0o3WUGHndWkZLl/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 ### Built With
+
+![architecture_diagram.png](/images/architecture_diagram.png)
 
 * Golang
 * MySQL
@@ -189,7 +198,6 @@ Login credentials for admin (ID: 1, Role: Admin)
     "password": "passadmin"
 }
 ```
-
 Login credentials for auliaihza (ID: 2, Role: User)
 ```yaml
 {
@@ -197,10 +205,32 @@ Login credentials for auliaihza (ID: 2, Role: User)
     "password": "pass"
 }
 ```
-API documentation by using Postman [here](https://docs.google.com/document/d/1AfsaaEmpjgCMm3izfT0o3WUGHndWkZLl/edit#)
+API documentation by using Postman [**here**](https://documenter.getpostman.com/view/24651703/2s8YsxuBWn)
 
+To stop the Minikube process
+```sh
+minikube stop
+```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- Screenshot EXAMPLES -->
+## Screenshots
+
+### Docker
+![docker-containers.png](/images/screenshots/docker/docker-containers.png)
+![docker-images.png](/images/screenshots/docker/docker-images.png)
+![docker-logs.png](/images/screenshots/docker/docker-logs.png)
+
+### Kubernetes
+![kuber-logs.png](/images/screenshots/kubernetes/kuber-logs.png)
+
+### Postman
+![auth-login.png](/images/screenshots/postman/auth-login.png)
+![user-getall.png](/images/screenshots/postman/user-getall.png)
+![user-create.png](/images/screenshots/postman/user-create.png)
+You can see other postman screenshots at `/screenshots/postman/`
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 ## License
