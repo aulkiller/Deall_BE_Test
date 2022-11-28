@@ -1,0 +1,27 @@
+
+apiVersion: apps/v1 
+kind: Deployment                                              
+metadata:
+  name: deallapp-mysql                                   
+  labels:
+    app: deallapp-mysql
+spec:
+  replicas: 1                                                 
+  selector:
+    matchLabels: 
+      app: deallapp-mysql                                
+  template:                                                   
+    metadata:
+      labels:                                                 
+        app: deallapp-mysql                              
+    spec:                                                     
+      containers:
+      - name: deallapp-mysql 
+        image: aulkiller/deallapp:1.0.0                   
+        imagePullPolicy: IfNotPresent                         
+        ports:
+          - name: http
+            containerPort: 8080                              
+        envFrom:
+          - secretRef:
+              name: mysql-secret     
